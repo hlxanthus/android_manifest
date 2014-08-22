@@ -5,6 +5,18 @@
            fetch="https://android-review.googlesource.com/" />
   <remote name="rascarlo"
            fetch="git://github.com/rascarlo/" /> 
+           
+    <!-- jflte devices -->
+           
+  <remote  name="cm"
+           fetch=".."
+           review="review.cyanogenmod.org" />
+           
+  <remote name="tm"
+           fetch="https://github.com/TheMuppets/" />
+           
+    <!--  -->
+           
   <default revision="refs/tags/android-4.4.4_r2.0.1"
            remote="aosp"
            sync-j="4" />
@@ -440,5 +452,15 @@
   <project path="vendor/lge" name="android_vendor_lge" remote="rascarlo" revision="kk-ras-mr4_r1" />
   <project path="vendor/rascarlo" name="android_vendor_rascarlo" remote="rascarlo" revision="kk-ras-mr4_r1" />
   <project path="vendor/samsung" name="android_vendor_samsung" remote="rascarlo" revision="kk-ras-mr4_r1" />
+  
+    <!-- jflte devices -->
+  
+  <project name="CyanogenMod/android_device_samsung_jflte" path="device/samsung/jflte" remote="cm" />
+  <project name="CyanogenMod/android_device_samsung_qcom-common" path="device/samsung/qcom-common" remote="cm" />
+  <project name="CyanogenMod/android_kernel_samsung_jf" path="kernel/samsung/jf" remote="cm" />
+  <project name="CyanogenMod/android_hardware_samsung" path="hardware/samsung" remote="cm" />
+  <project name="proprietary_vendor_samsung" path="vendor/samsung" revision="cm-11.0" remote="tm" />
+  
+    <!--  -->
 
 </manifest>
